@@ -1,4 +1,4 @@
-# 📸 SummarySnap
+# 📸 Summary Snap
 
 An AI-powered application that instantly captures the essence of PDF documents through intelligent summarization and enables interactive Q&A conversations using Google Gemini and LangChain.
 
