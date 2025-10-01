@@ -7,7 +7,6 @@ RUN apt-get update -y && apt-get install -y \
     apt-transport-https \
     build-essential \
     curl \
-    software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
