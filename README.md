@@ -173,7 +173,7 @@ This project is licensed under the MIT License.
 
 If you have any questions or run into issues, please:
 - Open an issue on GitHub
-- Contact me at your.email@example.com
+- Contact me at rajputsujal098@gmail.com
 
 ---
 
