@@ -2,7 +2,9 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
+# Install necessary packages including apt-transport-https
+RUN apt-get update -y && apt-get install -y \
+    apt-transport-https \
     build-essential \
     curl \
     software-properties-common \
