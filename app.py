@@ -1,6 +1,21 @@
 import streamlit as st
 from summarizer.chains import summarize_text
 from summarizer.loader import load_pdf
+from summarizer.vectorstore import build_vectorstore
+from summarizer.qa_chain import get_qa_chain
+
+@st.cache_data(show_spinner=False)
+def cached_pdf_text(uploaded_file):
+    return load_pdf(uploaded_file)
+
+@st.cache_data(show_spinner=False)
+def cached_summary(text):
+    return summarize_text(text)
+
+@st.cache_resource(show_spinner=False)
+def cached_vectorstore(pdf_text):
+    return build_vectorstore(pdf_text)
+
 
 st.set_page_config(page_title="Summary Snap", layout="centered")
 
@@ -16,10 +31,25 @@ if uploaded_file:
     if st.button("Summarize PDF"):
         with st.spinner("Reading and summarizing PDF..."):
             pdf_text = load_pdf(uploaded_file)
-            summary = summarize_text(pdf_text)
+            summary = cached_summary(pdf_text)
 
             st.success("Summary ready!")
             st.write(summary)
+
+st.divider()
+st.subheader("💬 Ask Questions from PDF")
+
+if uploaded_file:
+    pdf_text = cached_pdf_text(uploaded_file)
+    vectordb = build_vectorstore(pdf_text)
+    qa_chain = get_qa_chain(vectordb)
+
+    question = st.text_input("Ask a question about the PDF")
+
+    if question:
+        result = qa_chain.invoke({"question": question})
+        st.write(result["answer"])
+
 
 
 
