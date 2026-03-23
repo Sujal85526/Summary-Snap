@@ -1,4 +1,4 @@
-# 📸 Summary Snap
+# Summary Snap
 
 An AI-powered application that instantly captures the essence of PDF documents through intelligent summarization and enables interactive Q&A conversations using Google Gemini and LangChain.
 
@@ -7,7 +7,7 @@ An AI-powered application that instantly captures the essence of PDF documents t
 ![LangChain](https://img.shields.io/badge/LangChain-0.3.1-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## 🌟 Features
+## Features
 
 - **📝 Instant Summarization**: Snap comprehensive summaries of PDF documents using Google Gemini's advanced language model
 - **💬 Interactive Chat**: Ask questions about your PDF and get context-aware answers
@@ -33,7 +33,7 @@ An AI-powered application that instantly captures the essence of PDF documents t
 - Google Gemini API key (free from [ai.google.dev](https://ai.google.dev))
 - pip package manager
 
-## 🚀 Installation
+## Installation
 
 ### 1. Clone the Repository
 
@@ -99,7 +99,7 @@ summary-snap/
 6. **Generation**: Gemini generates summaries and answers based on context
 7. **Memory**: Conversation history maintained for contextual responses
 
-## 🎯 Use Cases
+## Use Cases
 
 - **Research**: Quickly understand lengthy academic papers
 - **Legal**: Summarize legal documents and contracts
@@ -107,14 +107,14 @@ summary-snap/
 - **Education**: Study materials and textbooks more efficiently
 - **Documentation**: Navigate technical documentation faster
 
-## 🔐 Security & Privacy
+## Security & Privacy
 
 - API keys stored securely in `.env` file (never committed to Git)
 - PDFs processed temporarily and not stored permanently
 - All processing happens locally except API calls to Gemini
 - No data retention on external servers
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -130,7 +130,7 @@ summary-snap/
 - Verify key is valid at [ai.google.dev](https://ai.google.dev)
 - Check you haven't exceeded free tier limits (25 requests/day)
 
-## 📈 Future Enhancements
+## Future Enhancements
 
 - [ ] Support for multiple PDF uploads
 - [ ] Export summaries as PDF with formatting
@@ -142,7 +142,7 @@ summary-snap/
 - [ ] Chat history persistence
 - [ ] Batch processing for multiple documents
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -156,7 +156,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [LangChain](https://python.langchain.com/) for the amazing framework
 - [Google Gemini](https://ai.google.dev/) for providing free API access
@@ -179,7 +179,7 @@ If you have any questions or run into issues, please:
 
 ⭐ **Star this repository if you found it helpful!**
 
-**SummarySnap** - Snap the essence of any document instantly! 📸
+**SummarySnap** - Snap the essence of any document instantly! 
 
 Built with ❤️ using LangChain and Google Gemini
 
